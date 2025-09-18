@@ -1240,10 +1240,22 @@ textarea.form-input {
     padding: 30px;
     border-radius: 8px;
 }
+.gallery {
+    margin-top: 50px;
+    display: grid;
+grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
 }
 
 
 @media(min-width: 768px) and (max-width: 900px)  {
+    .gallery {
+        margin-top: 50px;
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
     .package-grid{
         margin-top: 40px;
         display: grid;
@@ -1423,6 +1435,12 @@ textarea.form-input {
 
 
 @media (min-width: 901px) {
+    .gallery {
+        margin-top: 50px;
+        display: grid;
+    grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
     .package-grid{
         margin-top: 40px;
         display: grid;
@@ -1632,4 +1650,199 @@ textarea.form-input {
     font-size: 15px;
     color: #6e6969;
     text-transform: uppercase;
+}
+
+
+.img-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .img-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .img-card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .img-card-header img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .img-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .heart {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 3px 9px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    font-size: 18px;
+    color: red;
+  }
+
+  /* Modal (zoom view) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .close:hover { color: red; }
+
+  /* Navigation buttons */
+  .nav-img-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.3s;
+  }
+  .nav-img-btn:hover { background: rgba(0,0,0,0.7); }
+
+  .prev-img { left: 30px; }
+  .next-img { right: 30px; }
+  
+
+.card-blog {
+    /* width: 350px; */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-blog:hover {
+    transform: translateY(-5px);
+}
+
+.card-blog-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-blog:hover .card-blog-image img {
+    transform: scale(1.05);
+}
+
+
+.card-blog-content {
+    padding: 20px;
+}
+.card-blog h2{
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+.card-description {
+    font-size: 14px;
+    color: #636e72;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-blog-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background: #0a53d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card-blog-button:hover {
+    background: #1c64d6;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  
+    
+    .card-blog {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 350px;
+    }
 }

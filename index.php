@@ -364,7 +364,7 @@
                 </button>
             </div>
 
-            <div class="dots">
+            <div class="dots" id="dots">
                 <div class="dot active" data-index="0"></div>
                 <div class="dot" data-index="1"></div>
                 <div class="dot" data-index="2"></div>

@@ -38,9 +38,9 @@
                 <a href="index.php">Home</a>
                 <a href="about-us.php">About Us</a>
                 <a href="packages.php">Packages</a>
-                <a href="#">Gallery</a>
+                <a href="gallery.php">Gallery</a>
                 <a href="testimonials.php">Testimonials</a>
-                <a href="#">Blog</a>
+                <a href="blog.php">Blog</a>
                 <a href="#">Login</a>
                 <button class="btn-contact">Contact Us</button>
             </nav>
