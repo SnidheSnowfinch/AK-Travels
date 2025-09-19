@@ -10,7 +10,12 @@
         <h1>Our Popular Packages</h1>
 
         <div class="package-grid">
-
+       <a href="pune-to-mahabaleashwar.php"> <div class="package-card">
+                <img src="bootstrap/images/mahabaleshwar.jpg" />
+                <div class="inner">
+                    <p>Pune To Mahabaleshwar</p>
+                </div>
+            </div></a>
             <div class="package-card">
                 <img src="bootstrap/images/ashvathvinayak.jpg" />
                 <div class="inner">
@@ -29,12 +34,7 @@
                     <p>Pune To Goa</p>
                 </div>
             </div>
-            <div class="package-card">
-                <img src="bootstrap/images/mahabaleshwar.jpg" />
-                <div class="inner">
-                    <p>Pune To Mahabaleshwar</p>
-                </div>
-            </div>
+          
             <div class="package-card">
                 <img src="bootstrap/images/mumbai.jpg" />
                 <div class="inner">

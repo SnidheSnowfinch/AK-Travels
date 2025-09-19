@@ -342,6 +342,57 @@ if(prevBtnImg){
     });}
 });
 
+        document.addEventListener('DOMContentLoaded', function () {
+            // Main tabs functionality
+            const tabs = document.querySelectorAll('.tab-major');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+
+                    // Show the corresponding tab content
+                    const tabType = tab.getAttribute('data-tab');
+                    const tabContents = document.querySelectorAll('.tab-content-new');
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    document.getElementById(tabType + '-content').classList.add('active');
+                });
+            });
+
+            // Detail tabs functionality
+            const detailTabs = document.querySelectorAll('.card-detail-tab');
+
+            detailTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const parent = tab.closest('.card-inner-body');
+
+                    // Remove active class from all detail tabs in this card
+                    parent.querySelectorAll('.card-detail-tab').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+
+                    // Hide all detail content in this card
+                    parent.querySelectorAll('.card-detail-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the selected detail content
+                    const detailId = tab.getAttribute('data-detail');
+                    document.getElementById(detailId).classList.add('active');
+                });
+            });
+        });
+
 </script>
 
 </body>
